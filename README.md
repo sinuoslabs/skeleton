@@ -1,1 +1,1 @@
-#NesJS Notify
+# NesJS channel notification skeleton

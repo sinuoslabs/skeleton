@@ -1,3 +1,3 @@
-export * from './webhook.channel';
-export * from './webhook.interface';
-export * from './webhook.message';
+export * from './service-name.channel';
+export * from './service-name.interface';
+export * from './service-name.message';

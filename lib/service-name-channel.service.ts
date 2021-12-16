@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { NestJsNotify, NestjsNotifyService } from '@sinuos/nestjs-notification';
 
 @Injectable()
-export class WebhookChannelService {
+export class ServiceNameChannelService {
   /**
    * @constructor
    * @param notifications
