@@ -1,3 +1,3 @@
 export * from './bootstrap';
-export * from './service-name-channel.service';
-export * from './service-name-channel.module';
+export * from './package-name-channel.service';
+export * from './package-name-channel.module';

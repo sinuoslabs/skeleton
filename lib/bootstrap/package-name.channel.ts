@@ -1,9 +1,9 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
-import { INestjsNotifyChannel } from '@sinuos/nestjs-notification';
-import { IServiceNameChannel } from './service-name.interface';
+import { INestjsNotificationChannel } from '@sinuos/nestjs-notification';
+import { IPackageNameChannel } from './package-name.interface';
 
 @Injectable()
-export class ServiceNameChannel implements INestjsNotifyChannel {
+export class PackageNameChannel implements INestjsNotificationChannel {
   /**
    * @constructor
    */
@@ -14,13 +14,13 @@ export class ServiceNameChannel implements INestjsNotifyChannel {
   /**
    * Send notify action
    * @public
-   * @param {IServiceNameChannel} notification
+   * @param {IPackageNameChannel} notification
    * @return Promise<AxiosResponse<any>>
    */
   public async send(
-    notification: IServiceNameChannel,
+    notification: IPackageNameChannel,
   ): Promise<any> {
-    const message = ServiceNameChannel.getData(notification);
+    const message = PackageNameChannel.getData(notification);
 
     return Promise.resolve(undefined);
   }
@@ -29,7 +29,7 @@ export class ServiceNameChannel implements INestjsNotifyChannel {
    * Get the data for the notification.
    * @param notification
    */
-  private static getData(notification: IServiceNameChannel) {
+  private static getData(notification: IPackageNameChannel) {
     if (typeof notification.toServiceAction === 'function') {
       return notification.toServiceAction();
     }

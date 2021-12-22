@@ -37,7 +37,7 @@
     "rxjs": "^6.0.0 || ^7.0.0"
   },
   "dependencies": {
-    "@sinuos/nestjs-notification": "^1.0.1"
+    "@sinuos/nestjs-notification": "*"
   },
   "devDependencies": {
     "@commitlint/cli": "15.0.0",
@@ -74,6 +74,9 @@
     "name": "author_name",
     "email": "author_email",
     "url": "author_url"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "homepage": "https://github.com/nestjs-notification-channels/:package_name#readme",
   "bugs": {

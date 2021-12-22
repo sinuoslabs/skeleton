@@ -1,3 +1,3 @@
-export * from './service-name.channel';
-export * from './service-name.interface';
-export * from './service-name.message';
+export * from './package-name.channel';
+export * from './package-name.interface';
+export * from './package-name.message';
