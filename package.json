@@ -8,7 +8,7 @@
     "nestjs",
     "nestjs-notification-channels",
     "notification",
-    "skeleton"
+    ":package_name"
   ],
   "scripts": {
     "build": "rimraf -rf dist && tsc -p tsconfig.json",
@@ -33,12 +33,11 @@
   ],
   "peerDependencies": {
     "@nestjs/common": "^7.0.0 || ^8.0.0",
+    "@sinuos/nestjs-notification": "*",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.0.0 || ^7.0.0"
   },
-  "dependencies": {
-    "@sinuos/nestjs-notification": "*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-angular": "15.0.0",
@@ -47,6 +46,7 @@
     "@nestjs/platform-express": "8.2.3",
     "@nestjs/testing": "8.2.3",
     "@semantic-release/git": "^10.0.1",
+    "@sinuos/nestjs-notification": "*",
     "@types/jest": "^27.0.3",
     "@types/node": "16.11.12",
     "@typescript-eslint/eslint-plugin": "5.6.0",

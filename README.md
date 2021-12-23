@@ -3,12 +3,11 @@
 ## Installation
 
 ```bash
-$ npm i @nestjs-notification-channels/:channelname
+$ npm i @nestjs-notification-channels/:package_name
 ```
 
 ## Usage
 
-
 ## Licence
 
-:package_name is [MIT licensed](LICENSE).
+package_name is [MIT licensed](LICENSE).

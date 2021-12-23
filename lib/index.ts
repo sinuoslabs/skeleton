@@ -1,3 +1,4 @@
 export * from './bootstrap';
-export * from './package-name-channel.service';
+export * from './constants';
+export * from './exceptions';
 export * from './package-name-channel.module';

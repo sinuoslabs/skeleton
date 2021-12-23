@@ -1,6 +1,7 @@
-import { Injectable, InternalServerErrorException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { INestjsNotificationChannel } from '@sinuos/nestjs-notification';
-import { IPackageNameChannel } from './package-name.interface';
+import { IPackageNameChannel } from '../interfaces';
+import { PackageNameException } from '../exceptions';
 
 @Injectable()
 export class PackageNameChannel implements INestjsNotificationChannel {
@@ -15,27 +16,46 @@ export class PackageNameChannel implements INestjsNotificationChannel {
    * Send notify action
    * @public
    * @param {IPackageNameChannel} notification
-   * @return Promise<AxiosResponse<any>>
+   * @return Promise<any>
    */
-  public async send(
-    notification: IPackageNameChannel,
-  ): Promise<any> {
+  public async send(notification: IPackageNameChannel): Promise<any> {
+    // validate content.
+    this.validator(notification);
+
     const message = PackageNameChannel.getData(notification);
 
     return Promise.resolve(undefined);
   }
 
   /**
-   * Get the data for the notification.
+   * Validator.
+   * @method
+   * @param {IPackageNameChannel} notification
+   * @private
+   */
+  private validator(notification: IPackageNameChannel) {
+    const message = PackageNameChannel.getData(notification);
+    //
+  }
+
+  /**
+   * Get data.
    * @param notification
+   * @private
    */
   private static getData(notification: IPackageNameChannel) {
-    if (typeof notification.toServiceAction === 'function') {
-      return notification.toServiceAction();
+    return PackageNameChannel.getChannelData(notification);
+  }
+
+  /**
+   * Get the data for the notification.
+   * @param {IPackageNameChannel} notification
+   */
+  private static getChannelData(notification: IPackageNameChannel) {
+    if (typeof notification.toPackageNameAction === 'function') {
+      return notification.toPackageNameAction();
     }
 
-    throw new InternalServerErrorException(
-      'Notification is missing toWebhook method.',
-    );
+    throw new PackageNameException('Notification is missing toWebhook method.');
   }
 }
