@@ -3,6 +3,12 @@
   "assignees": ["houssenedao", "daohassane"],
   "packageRules": [
     {
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint",
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
       "depTypeList": ["devDependencies"],
       "automerge": true
     },
