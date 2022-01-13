@@ -1,6 +1,5 @@
 {
   "semanticCommits": true,
-  "assignees": ["houssenedao", "daohassane"],
   "packageRules": [
     {
       "matchPackagePatterns": ["eslint"],
