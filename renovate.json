@@ -1,5 +1,12 @@
 {
+  "extends": ["config:base"]
   "semanticCommits": true,
+  "ignoreTests": true,
+  "assignAutomerge": true,
+  "automergeType": "pr",
+  "npm": {
+    "stabilityDays": 3
+  },
   "packageRules": [
     {
       "depTypeList": ["devDependencies"],
@@ -7,17 +14,9 @@
       "automerge": true,
     },
     {
-      "matchPackagePrefixes": [
-        "@types/"
-      ],
+      "matchPackagePrefixes": ["@types/"],
+      "addLabels": ["@types"],
       "automerge": true
     }
   ],
-  "ignoreTests": true,
-  "assignAutomerge": true,
-  "automergeType": "pr",
-  "ignoreTests": true,
-  "extends": [
-    "config:base"
-  ]
 }
