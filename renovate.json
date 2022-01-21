@@ -3,11 +3,20 @@
   "packageRules": [
     {
       "depTypeList": ["devDependencies"],
+      "addLabels": ["dev-dependency"],
       "automerge": true,
-      "assignAutomerge": true,
-      "addLabels": ["dev-dependency"]
+    },
+    {
+      "matchPackagePrefixes": [
+        "@types/"
+      ],
+      "automerge": true
     }
   ],
+  "ignoreTests": true,
+  "assignAutomerge": true,
+  "automergeType": "pr",
+  "ignoreTests": true,
   "extends": [
     "config:base"
   ]
