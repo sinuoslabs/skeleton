@@ -3,11 +3,17 @@
   "semanticCommits": true,
   "ignoreTests": true,
   "assignAutomerge": true,
+  "automerge": true,
   "automergeType": "pr",
+  "automergeComment": "bors: r+",
   "npm": {
     "stabilityDays": 3
   },
   "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
     {
       "depTypeList": ["devDependencies"],
       "addLabels": ["dev-dependency"],
