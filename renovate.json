@@ -11,7 +11,7 @@
     {
       "depTypeList": ["devDependencies"],
       "addLabels": ["dev-dependency"],
-      "automerge": true,
+      "automerge": true
     },
     {
       "matchPackagePrefixes": ["@types/"],
