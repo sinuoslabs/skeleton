@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base"]
+  "extends": ["config:base"],
   "semanticCommits": true,
   "ignoreTests": true,
   "assignAutomerge": true,
